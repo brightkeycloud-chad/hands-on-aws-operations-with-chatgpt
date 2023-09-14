@@ -1,0 +1,1 @@
+# hands-on-aws-operations-with-chatgpt
