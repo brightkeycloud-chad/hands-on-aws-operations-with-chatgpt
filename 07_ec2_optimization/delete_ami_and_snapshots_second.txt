@@ -1,0 +1,2 @@
+write a script using the AWS command line which generates a list of all AMIs in a single region, determines which of those AMIs are older than 180 days.  Using that list, identify all snapshots associated with the AMI, deregister the AMI, and delete the snapshots
+

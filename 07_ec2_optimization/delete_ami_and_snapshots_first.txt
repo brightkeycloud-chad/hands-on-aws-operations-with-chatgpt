@@ -1,0 +1,9 @@
+Interesting series of responses on my first try:
+
+write a script using the AWS command line which generates a list of all AMIs in a single region, determines which of those AMIs are older than 180 days.  Using that list, deregister the AMI and delete the associated snapshots
+
+the describe-images command will fail if executed after deregister-image, please modify accordingly
+
+this script does not have any effective changes. please move the snapshot list generation before the AMI deregistration
+
+(result actually has both inline code and functions to do both tasks, calling both of them in the script)

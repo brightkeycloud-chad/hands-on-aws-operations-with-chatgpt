@@ -1,0 +1,40 @@
+
+write a script using the AWS CLI which identifies all EBS volumes in a region for which the original volume doesn't exist
+
+add "--owner-ids self" to the describe-snapshots command, as it will reduce the time taken to complete the command
+
+this script is not what I wanted. modify the script to identify all EBS snapshots for which the original volume has been deleted
+
+update the describe-snapshots command to include "--owner-ids self"
+
+when the describe-volumes command returns an error, the script exits. Please modify the script to use that as proof the volume does not exist and report the successful outcome
+
+modify the script to ONLY return a list of volume IDs with no other text.
+
+modify the script to output the list to a text file
+
+modify the script to ONLY return the volume ID if the volume does NOT have a tag with a key named "DONOTDELETE"
+
+the above script returns only snapshots with the DONOTDELETE tag. I want snapshots that do NOT have the DONOTDELETE tag
+
+remove the encoding and decoding to and from base64
+
+in the previous script which generates the list of snapshot IDs, please remove volumeId from the describe-snapshots output
+
+add "--owner-ids self" to the describe-snapshot command and remove the filter section
+
+change the above script so that it only returns snapshot IDs where (the original volume ID does not exist, and the DONOTDELETE tag does not exist)
+
+AT THIS POINT I STARTED OVER!
+
+
+write a script using the AWS CLI which generates a list of EBS snapshot IDs. use "--owner-ids self" in the command. Only return the snapshot IDs which have a tag named OKTODELETE. Then test each of these snapshot IDs and output the snapshot IDs for which the volume_id has been previously deleted
+
+rather than using a function for volume_exists, generate a list of volume IDs in the region and test against that instead
+
+update the script to account for describe-volumes returning an empty output. That causes a jq error
+
+remove the check to see if volume_ids is empty. It isn't needed
+
+change the describe-volumes command to use --output text and remove the jq formatting from that line
+

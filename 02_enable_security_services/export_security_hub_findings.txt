@@ -1,0 +1,20 @@
+write a script using the AWS CLI that will export all Security Hub findings and convert to CSV format
+
+the script reports the following error:
+"jq: error (at <stdin>:216381): object ({"SeverityL...) is not valid in a csv row"
+
+the script reports the following error:
+"jq: error (at <stdin>:216381): Cannot iterate over string ("AwsIamUser")"
+
+(infinite chatgpt loop between those two errors, so we switch things up)
+
+write a script using python that will export all Security Hub findings and convert to CSV format
+
+the script returns the following error:
+"Traceback (most recent call last):
+  File "/Users/csmith/tmp/chatgpt/02_enable_security_services/./export_security_hub_findings.py", line 28, in <module>
+    product_name = finding['ProductFields']['ProductName']
+KeyError: 'ProductName'
+"
+
+the output is missing the resource IDs for each finding

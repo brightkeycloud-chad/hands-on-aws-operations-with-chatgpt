@@ -1,0 +1,9 @@
+write a script using the AWS CLI which loops through all regions and identifies all RDS instances with pending actions. Output the name of the database instance and the pending actions, if any
+
+the script returns the following error for describe-db-instances:
+Bad value for --query DBInstances[?PendingModifiedValues].{InstanceIdentifier: DBInstanceIdentifier, PendingModifiedValues}: Expecting: colon, got: rbrace: Parse error at column 100, token "}" (RBRACE), for expression:
+"DBInstances[?PendingModifiedValues].{InstanceIdentifier: DBInstanceIdentifier, PendingModifiedValues}"
+
+in the describe-db-instances command, there needs to be a label for second PendingModifiedValues just before the }. Change that text to "PendingModifiedValues: PendingModifiedValues"
+
+

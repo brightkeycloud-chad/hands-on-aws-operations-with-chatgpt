@@ -1,0 +1,4 @@
+write a script to create a Gateway Endpoint in all existing AWS VPCs in all regions, and create a route in each VPC's route table to use the appropriate Gateway Endpoint
+
+gateway endpoint routes require a destination of the prefix_list_id. Modify the above script to use these instead of 0.0.0.0/0
+

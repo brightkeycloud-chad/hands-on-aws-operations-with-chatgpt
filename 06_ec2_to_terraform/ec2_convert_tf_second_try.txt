@@ -1,0 +1,14 @@
+write a script in two parts. the first part accepts an AWS EC2 instance ID and saves the describe-instances output in a variable, and include all tags in this inventory. The second part converts that description into a terraform template, also including all tags. 
+
+(output is in python and jinja)
+
+please use a bash script and the AWS CLI instead of python and jinja
+
+(output is in two scripts)
+
+combine the above into a single script
+
+(output uses input and output files)
+
+modify the script to use variables instead of an input and output file
+

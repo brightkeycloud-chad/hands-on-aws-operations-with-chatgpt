@@ -1,0 +1,15 @@
+create a python script to identify all unassociated elastic IP addresses in all AWS regions and release them
+
+the script returned the following error:
+"Traceback (most recent call last):
+  File "/Users/csmith/tmp/chatgpt/05_network_optimization/./unattached_eips.py", line 39, in <module>
+    main()
+  File "/Users/csmith/tmp/chatgpt/05_network_optimization/./unattached_eips.py", line 34, in main
+    release_eips(region, unassociated_eips)
+  File "/Users/csmith/tmp/chatgpt/05_network_optimization/./unattached_eips.py", line 21, in release_eips
+    ec2.release_address(PublicIp=eip)
+  File "/Users/csmith/Library/Python/3.9/lib/python/site-packages/botocore/client.py", line 535, in _api_call
+    return self._make_api_call(operation_name, kwargs)
+  File "/Users/csmith/Library/Python/3.9/lib/python/site-packages/botocore/client.py", line 980, in _make_api_call
+    raise error_class(parsed_response, operation_name)
+botocore.exceptions.ClientError: An error occurred (InvalidParameterValue) when calling the ReleaseAddress operation: You must specify an allocation id when releasing a VPC elastic IP address"

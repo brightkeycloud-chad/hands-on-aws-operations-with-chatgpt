@@ -1,0 +1,4 @@
+convert the script into a Terraform template
+
+The script doesn't work for Config because of the prereqs listed in:
+https://docs.aws.amazon.com/config/latest/developerguide/gs-cli-subscribe.html

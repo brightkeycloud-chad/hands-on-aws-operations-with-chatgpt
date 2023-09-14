@@ -1,0 +1,7 @@
+write a python script which accepts an AWS region and an EC2 instance id. The script should describe the instance details and convert the details into a terraform template to launch an exact copy of the instance. Instance tags should also be converted, and the script should accommodate multiple tags
+
+modify the script to accept the variables on the command line as arguments. Also modify the script to capture ALL properties of the instance including security group, subnet ID, and VPC
+
+tags should be a single object, not multiple objects. also, include the keypair in the conversion
+
+

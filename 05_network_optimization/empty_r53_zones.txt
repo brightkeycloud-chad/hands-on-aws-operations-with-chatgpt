@@ -1,0 +1,3 @@
+write a python script to identify AWS route 53 hosted zones with only NS and SOA records and delete the hosted zone
+
+(the script needs a comment removed to actually delete the identified zones)

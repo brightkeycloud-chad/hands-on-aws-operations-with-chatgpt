@@ -1,0 +1,45 @@
+write a script using the AWS command line which enables AWS Config, Security Hub, and GuardDuty in all regions for a single account
+
+OUTPUT 1:
+#!/bin/bash
+
+# Enable AWS Config
+aws configservice put-configuration-recorder --configuration-recorder name=default --recording-group allSupported=true
+aws configservice start-configuration-recorder --configuration-recorder-name default
+
+# Enable Security Hub
+aws securityhub enable-security-hub
+
+# Enable GuardDuty
+regions=$(aws ec2 describe-regions --query 'Regions[*].RegionName' --output text)
+for region in $regions
+do
+    aws guardduty create-detector --enable --region $region
+done
+
+in the above script, AWS Config is only being enabled for a single region. I need it to loop through all regions to enable in each
+
+OUTPUT 2:
+#!/bin/bash
+
+# Enable AWS Config
+regions=$(aws ec2 describe-regions --query 'Regions[*].RegionName' --output text)
+for region in $regions
+do
+    aws configservice put-configuration-recorder --configuration-recorder name=default --recording-group allSupported=true --region $region
+    aws configservice start-configuration-recorder --configuration-recorder-name default --region $region
+done
+
+# Enable Security Hub
+aws securityhub enable-security-hub
+
+# Enable GuardDuty
+for region in $regions
+do
+    aws guardduty create-detector --enable --region $region
+done
+
+Security hub must also be enabled in all regions. Create one loop for the regions and inside the loop, enable Config, Security Hub and GuardDuty
+
+The script doesn't work for Config because of the prereqs listed in:
+https://docs.aws.amazon.com/config/latest/developerguide/gs-cli-subscribe.html

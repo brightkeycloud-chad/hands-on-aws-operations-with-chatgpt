@@ -1,0 +1,2 @@
+write a script to create an AWS IAM role for vpc flow logs according to the instructions on https://docs.aws.amazon.com/vpc/latest/tgw/flow-logs-cwl.html
+

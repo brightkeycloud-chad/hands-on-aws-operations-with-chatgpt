@@ -1,0 +1,7 @@
+write a script to identify all public accessible resources in every region of an AWS account
+
+Update this script to include public accessible load balancers and S3 buckets
+
+update the script to filter for resources that are accessible from the entire Internet, such as associated security groups with inbound 0.0.0.0/0 rules
+
+

@@ -1,0 +1,7 @@
+write a script using the AWS CLI which identifies IAM users that have access keys over 365 days old
+
+change the script to use us-east-1 as the region
+
+change the script to use macos date format
+
+remove the logic for YOUR_IGNORED_USERNAME

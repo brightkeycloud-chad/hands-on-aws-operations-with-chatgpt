@@ -1,0 +1,3 @@
+write a script using the AWS CLI which accepts an input file of EBS snapshot IDs and deletes them. the input file is named deleted_snapshot_ids.txt
+
+

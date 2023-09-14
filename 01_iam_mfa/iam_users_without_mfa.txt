@@ -1,0 +1,1 @@
+write a script using the AWS command line which returns the IAM users which do not have MFA enabled 
