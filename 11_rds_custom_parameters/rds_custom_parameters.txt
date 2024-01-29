@@ -1,6 +1,6 @@
 write a script using the AWS CLI that takes a region and an RDS parameter group name as arguments, then describes the parameters in the parameter group to determine which have been changed from the default value. Output the custom parameters
 
-write a script using the AWS CLI that takes a region and an RDS parameter group name as arguments, then describes the parameters in the parameter group to determine which have a Source value of "Custom". Output the custom parameters
+write a script using the AWS CLI that takes a region and an RDS parameter group name as arguments, then describes the parameters in the parameter group to determine which have a Source value of "user". Output the custom parameters
 
 update the script to also return the value of the parameter, as well as the default value
 

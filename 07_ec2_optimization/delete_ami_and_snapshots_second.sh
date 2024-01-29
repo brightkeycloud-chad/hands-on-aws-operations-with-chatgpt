@@ -1,11 +1,11 @@
 #!/bin/bash
 
-region="your_aws_region"
+#region="your_aws_region"
 older_than_days=180
 current_date=$(date +%s)
 
 # Get a list of all AMIs in the specified region
-ami_list=$(aws ec2 describe-images --region "$region" --query 'Images[*].[ImageId, CreationDate]' --output text)
+ami_list=$(aws ec2 describe-images --region "$region" --query 'Images[*].[ImageId, CreationDate]' --owners self --output text)
 
 # Loop through each AMI to check if it's older than 180 days
 while read -r ami_id creation_date; do
