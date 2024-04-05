@@ -18,3 +18,9 @@ KeyError: 'ProductName'
 "
 
 the output is missing the resource IDs for each finding
+
+START OVER:
+
+write a python script to export AWS security hub findings for a single region into json format
+
+
