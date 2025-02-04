@@ -1,0 +1,5 @@
+Create a python script which performs the following tasks:
+Describe an EC2 instance, given the region and instance-id
+Create a terraform template from those instance details
+
+Ensure that all instance parameters are included in the terraform template. Examples include instance metadata and metadata configuration, all ebs volume and instance store volume configuration, and all tags

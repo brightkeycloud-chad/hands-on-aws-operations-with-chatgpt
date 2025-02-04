@@ -1,7 +1,8 @@
 #!/bin/bash
 
 #region="your_aws_region"
-older_than_days=180
+#older_than_days=180
+older_than_days=0
 current_date=$(date +%s)
 
 # Get a list of all AMIs in the specified region

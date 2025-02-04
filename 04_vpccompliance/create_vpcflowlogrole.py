@@ -1,4 +1,5 @@
 import boto3
+import json
 
 # Define the IAM role name and trust policy document
 role_name = "VPCFlowLogsRole"

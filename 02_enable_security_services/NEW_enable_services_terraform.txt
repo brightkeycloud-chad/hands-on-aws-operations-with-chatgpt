@@ -1,0 +1,8 @@
+(Using the o3-mini model)
+create a terraform template which enables the following AWS services in us-east-1 and us-west-2 in an AWS account:
+
+AWS Config
+AWS Guardduty
+AWS SecurityHub (with no standards enabled)
+
+Make sure that all prerequisites are met, including creating IAM roles or other resources, before enabling each service.

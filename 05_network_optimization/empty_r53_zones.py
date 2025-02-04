@@ -41,7 +41,7 @@ def main():
             print(f"Zone Name: {zone['ZoneName']}, Zone ID: {zone['ZoneId']}")
         
         # Uncomment the following line to delete the identified hosted zones
-        #delete_hosted_zones(zones_with_only_ns_soa)
+        delete_hosted_zones(zones_with_only_ns_soa)
     else:
         print("No hosted zones found that only contain NS and SOA records.")
 
