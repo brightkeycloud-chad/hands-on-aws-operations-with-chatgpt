@@ -1,0 +1,7 @@
+Using the o3-mini model
+
+write a script using the AWS CLI that takes a region and an RDS parameter group name as arguments, then describes the parameters in the parameter group to determine which have been changed from the default value. Output the custom parameters
+
+modify the above script to also exclude sources of "system". Also identify the default parameter value if possible.
+Remove the table output and use CSV instead
+
